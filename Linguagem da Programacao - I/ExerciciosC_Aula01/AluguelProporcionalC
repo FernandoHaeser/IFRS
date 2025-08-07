@@ -13,7 +13,7 @@
 * 
 * Escreva um programa que, leia o salário de 2 pessoas e o valor da conta a ser dividida. Apresente quanto cada um deve pagar em uma divisão com equidade.
 *
-* Após calcular a proporção da pessoa, basta multiplicar pelo valor da conta, que resultará no valor a ser pago pela pessoa.
+* Após calcular a proporção da pessoa, basta multiplicar pelo valor da conta, que resultará no valor a ser pago pela pessoa. : )
 */
 
 #include <stdio.h>
