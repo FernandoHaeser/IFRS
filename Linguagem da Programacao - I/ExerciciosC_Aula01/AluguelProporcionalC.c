@@ -20,7 +20,6 @@
 
 int main()
 {
-	
 	int rent = 1000;
 	float salary1, salary2, proportion1, proportion2, divisionPrice1, divisionPrice2;
 	
