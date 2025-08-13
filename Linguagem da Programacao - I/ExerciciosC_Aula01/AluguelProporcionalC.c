@@ -20,14 +20,17 @@
 
 int main()
 {
-	int rent = 1000;
-	float salary1, salary2, proportion1, proportion2, divisionPrice1, divisionPrice2;
+	float salary1, salary2, proportion1, proportion2, divisionPrice1, divisionPrice2, rent;
 	
 	printf("Informe o salario da primeira pessoa: R$");
 	scanf("%f", &salary1);
 	
 	printf("Informe o salario da segunda pessoa: R$");
 	scanf("%f", &salary2);
+	
+	printf("Informe o valor do Aluuel: R$");
+	scanf("%f", &rent);
+	
 	
 	proportion1 = salary1 / (salary1 + salary2);
 	proportion2 = salary2 / (salary1 + salary2);
