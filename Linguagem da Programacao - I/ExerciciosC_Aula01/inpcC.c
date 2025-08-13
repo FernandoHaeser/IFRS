@@ -27,13 +27,13 @@ int main()
 	printf("Salario atual do mesmo: R$");
 	scanf("%f", &salary);
 	
-	printf("Valor do INPC: ");
+	printf("Valor do INPC (em %%): ");
 	scanf("%f", &inpc);
 	
 	printf("Indice de produtividae: ");
 	scanf("%f", &indexProductivity);
 	
-	increase = (salary*0,75*inpc)/100 + (salary * indexProductivity)/100;
+	increase = (salary*0.75*inpc)/100 + (salary * indexProductivity)/100;
 	salary = salary + increase;
 	
 	printf("\nO funcionário %d vai receber um aumento de R$%.2f, logo seu novo salario sera de: R$%.2f", employeeNumber, increase, salary);
