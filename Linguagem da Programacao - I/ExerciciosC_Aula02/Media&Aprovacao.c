@@ -17,15 +17,15 @@ int main()
     printf("\nInforme sua primeira nota: ");
     scanf("%d", &nota1);
     
-    if (nota1 > 10) {
+    if (nota1 > 10 || nota1 < 0) {
         printf("\nInforme uma nota valida por favor!");
         continue;
     }
 
-    printf("\nInforme sua segundaa nota: ");
+    printf("\nInforme sua segunda nota: ");
     scanf("%d", &nota2);
     
-    if (nota1 > 10) {
+    if (nota2 > 10 || nota2 < 0) {
         printf("\nInforme uma nota valida por favor!");
         continue;
     }
@@ -33,7 +33,7 @@ int main()
     printf("\nInforme sua terceira nota: ");
     scanf("%d", &nota3);
     
-    if (nota1 > 10) {
+    if (nota3 > 10 || nota3 < 0) {
         printf("\nInforme uma nota valida por favor!");
         continue;
     }
