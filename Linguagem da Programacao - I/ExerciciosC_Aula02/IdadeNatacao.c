@@ -24,12 +24,12 @@ int main()
     
     if (age >= 5 && age <= 7)
         printf("\nVocê está na categoria: Infantil A");
-    if (age >= 8 && age <= 10)
+    else if (age >= 8 && age <= 10)
         printf("\nVocê está na categoria: Infantil B");
-    if (age >= 11 && age <= 13)
+    else if (age >= 11 && age <= 13)
         printf("\nVocê está na categoria: Juvenil A");
-    if (age >= 14 && age <= 17)
+    else if (age >= 14 && age <= 17)
         printf("\nVocê está na categoria: Juvenil B");
-    if (age > 18)
+    else
         printf("\nVocê está na categoria: Adulto(a)");
 }
