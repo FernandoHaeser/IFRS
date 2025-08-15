@@ -12,9 +12,11 @@ int main() {
     
     printf("Informe um numero para saber se ele é par ou ímpar: ");
     scanf("%d", &num);
+    
     if (num % 2 == 0)
         printf("\nSeu número é par!");
     else
         printf("\nSeu número é ímpar!");
-        
+
+    return 0; 
 }
