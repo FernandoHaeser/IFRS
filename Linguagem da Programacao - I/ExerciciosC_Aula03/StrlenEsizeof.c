@@ -13,9 +13,11 @@ int main()
 {
     char name[20];
     
-    printf("Informe seu nome por gentileza: ");
+    printf("\n\nInforme seu nome por gentileza: ");
     gets(name);
     
-    printf("Seu nome ocupa %d espaços", strlen(name));
-    printf("\nA variável nome, tem capacidade de %d espaços.", sizeof(name));
+    printf("\nSeu nome ocupa %zu espaços", strlen(name));
+    printf("\nA variável nome, tem capacidade de %zu espaços.", sizeof(name));
+    
+    //zu, usado para size_t, retorna como se fosse o Int.
 }
