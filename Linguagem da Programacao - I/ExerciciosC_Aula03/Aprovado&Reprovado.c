@@ -46,7 +46,7 @@ int main()
         strcpy(aprovacao, "Aprovado");
         
         
-    printf("\n\nO conceito do aluno foi %c, com média de%2.f ele teve %d faltas, logo está %s.", notaFinal, media, faltas, aprovacao);  
+    printf("\n\nO conceito do aluno foi %c, com média de%.2f ele teve %d faltas, logo está %s.", notaFinal, media, faltas, aprovacao);  
     
     return 0;
 }
