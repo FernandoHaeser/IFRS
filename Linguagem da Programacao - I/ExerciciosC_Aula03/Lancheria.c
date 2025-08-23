@@ -68,13 +68,15 @@ int main()
             strcpy(lanche, "Refrigerante");
             valorLanche = 2;
         } 
+        
         printf("\nVocê escolheu o lanche %s, e ele custa R$%.2f", lanche, valorLanche);
         printf("\nVocê deseja quantas quantidades desse produto? ");
         scanf("%d", &quantLanche);
         
         totalLanche = valorLanche * quantLanche;
         
-        printf("\nSeu lanche custou o total de: R$%.2f", totalLanche);
+        printf("\nPedido: %d unidade (s) de %s \n", quantLanche, lanche);
+        printf("Total: R$%.2f", totalLanche);
     } 
     return 0;
 }
