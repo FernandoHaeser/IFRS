@@ -29,6 +29,7 @@ int main()
     float valorLanche, totalLanche;
     char lanche[50];
 
+    //tabela da lancheria gerada pelo gpt, apenas para o programa ficar melhor visualmente.
     printf("==============================================\n");
     printf("%-15s | %-18s | %-10s\n", "Código", "Especificação", "Preço");
     printf("==============================================\n");
@@ -45,7 +46,7 @@ int main()
     printf("Informe o código do produto que deseja comprar: ");
     scanf("%d", &codigoLanche);
     
-    if (codigoLanche < 100  || codigoLanche > 105) {
+    if (codigoLanche < 100  || codigoLanche > 105) { //atribuicao de valores a todas opcoes.
         printf("Digite um numero valido por favor!");
         return 1;
     } else {
@@ -73,7 +74,7 @@ int main()
         printf("\nVocê deseja quantas quantidades desse produto? ");
         scanf("%d", &quantLanche);
         
-        totalLanche = valorLanche * quantLanche;
+        totalLanche = valorLanche * quantLanche; //calcula total do pedido
         
         printf("\nPedido: %d unidade (s) de %s \n", quantLanche, lanche);
         printf("Total: R$%.2f", totalLanche);
