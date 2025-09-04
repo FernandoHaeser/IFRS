@@ -15,7 +15,7 @@ programa
 			i++
 		}
 
-		mediaTime = somaIdades / (i+1)
+		mediaTime = somaIdades / 11
 
 		escreva("A media das idades do time de futebol XYZ e de: ", mat.arredondar(mediaTime,2))
 	}
