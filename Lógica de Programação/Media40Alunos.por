@@ -1,0 +1,82 @@
+programa
+{
+	inclua biblioteca Matematica --> mat
+	
+	funcao inicio()
+	{
+		real nota1, nota2, media, alunoMedia[40], mediaGeral = 0.0
+		cadeia nome, sobrenome
+		inteiro i = 0
+		
+		cadeia alunoNome[40], alunoSobrenome[40]
+		
+		enquanto (i < 2) {
+			escreva("\n\nInforme seu nome: ")
+			leia(nome)
+			alunoNome[i] = nome
+			
+			escreva("Informe seu sobrenome: ")
+			leia(sobrenome)
+			alunoSobrenome[i] = sobrenome
+
+			escreva("Informe sua primeira nota: ")
+			leia(nota1)
+
+		     enquanto (nota1 > 10 ou nota1 < 0) {
+
+				se (nota1 > 10 ou nota1 < 10) 
+					escreva("\nInforme uma nota valida!")
+		     
+				escreva("\n\nInforme sua primeira nota: ")
+				leia(nota1)
+	
+		     }
+		     
+			escreva("Informe sua segunda nota: ")
+			leia(nota2)
+
+		     enquanto (nota2 > 10 ou nota2 < 0) {
+
+				se (nota2 > 10 ou nota2 < 10) 
+					escreva("\nInforme uma nota valida!")		
+		   
+				escreva("\n\nInforme sua segunda nota: ")
+				leia(nota2)
+	
+		     }
+
+			media = (nota1 + nota2) / 2
+
+			mediaGeral += media
+
+			alunoMedia[i] = media
+
+			i++
+		}
+
+		i = 0
+
+		limpa()
+
+		enquanto (i < 2) {
+			escreva("\n\nAluno(a): ", alunoNome[i], " ", alunoSobrenome[i])
+			escreva("\nMedia do aluno: ", mat.arredondar(alunoMedia[i], 2))
+			i++
+		}
+
+		mediaGeral /= 2
+
+		escreva("\n\nMedia geral da turma: ", mediaGeral, "\n\n")
+	}
+}
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 1046; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = ;
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
