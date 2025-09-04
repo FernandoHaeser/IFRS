@@ -61,22 +61,17 @@ programa
 		enquanto (i < 2) {
 			escreva("\n\nAluno(a): ", alunoNome[i], " ", alunoSobrenome[i])
 			escreva("\nMedia do aluno: ", mat.arredondar(alunoMedia[i], 2))
+
+			se (alunoMedia[i] >= 7)
+				escreva("\nO aluno esta: Aprovado!")
+			senao
+				escreva("\nO aluno esta: Reprovado!")
+		
 			i++
 		}
-
+			
 		mediaGeral /= 2
 
 		escreva("\n\nMedia geral da turma: ", mediaGeral, "\n\n")
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 1046; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
