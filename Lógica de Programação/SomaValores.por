@@ -7,8 +7,7 @@ programa
 		
 		enquanto ( i < 20 ) {
 			escreva("Informe o ", (i+1), " valor: ")
-			leia(
-valor)
+			leia(valor)
 
 			somaValores += valor
 			
