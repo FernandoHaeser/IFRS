@@ -35,6 +35,8 @@ programa
 
 		se (salary != 0.0) {
 
+		limpa()
+
 		mediaSalarios = somaSalarios / hab
 		mediaFilhos = totalFilhos / hab
 
