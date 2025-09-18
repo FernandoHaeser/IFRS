@@ -40,8 +40,42 @@ int main () {
     printf("==============================================\n");
 
     do {
-
+        printf("Informe o código do lanche: ");
+        scanf("%d", &codigoLanche);
         
+        if (codigoLanche >= 100 && codigoLanche <= 105) {
+            printf("Informe a quantidade: ");
+            scanf("%d", &quantLanche);
+
+            switch (codigoLanche) {
+                case 100:
+                    valorLanche = 5.00 * quantLanche;
+                    break;
+                case 101:
+                    valorLanche = 6.00 * quantLanche;
+                    break;
+                case 102:
+                    valorLanche = 8.00 * quantLanche;
+                    break;
+                case 103:
+                    valorLanche = 5.00 * quantLanche;
+                    break;
+                case 104:
+                    valorLanche = 7.50 * quantLanche;
+                    break;
+                case 105:
+                    valorLanche = 2.00 * quantLanche;
+                    break;
+            }
+            
+            totalLanche += valorLanche;
+            
+        } else {
+            printf("Código inválido! Encerrando o pedido.\n");
+        }
 
     } while (codigoLanche >= 100 && codigoLanche <= 105);
+
+    printf("Total a pagar: R$ %.2f\n", totalLanche);
+
 }
