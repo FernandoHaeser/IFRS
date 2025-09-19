@@ -1,22 +1,29 @@
 programa
 {
+
+/*
+Desenvolva um algoritmo que leia um número informado pelo usuário e desenhe o seguinte padrão na tela.
+Ex: Número = 5
+     *****
+     ****
+     ***
+     **
+     *
+ */
 	
 	funcao inicio()
 	{
-		inteiro valor, somaValores = 0, i = 0
+		inteiro n
 		
-		enquanto ( i < 20 ) {
-			escreva("Informe o ", (i+1), " valor: ")
-			leia(valor)
+		escreva("Informe um numero: ")
+		leia(n)
 
-			somaValores += valor
-			
-			i++
+		para (inteiro i = n; i >=1; i--) {
+			para (inteiro j = 1; j <= i; j++) {
+				escreva("*")
+			}
+			escreva("\n")
 		}
-
-		limpa()
-
-		escreva("A soma dos valores e: ", somaValores)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -24,7 +31,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 272; 
+ * @POSICAO-CURSOR = 223; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

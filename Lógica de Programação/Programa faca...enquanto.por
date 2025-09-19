@@ -3,20 +3,24 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro valor, somaValores = 0, i = 0
-		
-		enquanto ( i < 20 ) {
-			escreva("Informe o ", (i+1), " valor: ")
-			leia(valor)
+	
 
-			somaValores += valor
-			
-			i++
-		}
+       inteiro N, cont
 
-		limpa()
+        cont= 1
+        escreva("Informa valor para N\n")
+        leia (N)
+        se (N < 1) {
+            faca{
+                escreva("Informa valor para N\n")
+                leia (N)
+            }enquanto (N >0)
+	}
+      faca{
+             escreva (cont," PROGRAMA\n")
+              cont++
+      }enquanto (cont <= N)
 
-		escreva("A soma dos valores e: ", somaValores)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -24,7 +28,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 272; 
+ * @POSICAO-CURSOR = 385; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
