@@ -10,7 +10,7 @@ programa
 		
 		cadeia alunoNome[40], alunoSobrenome[40]
 		
-		enquanto (i < 2) {
+		enquanto (i < 40) {
 			escreva("\n\nInforme seu nome: ")
 			leia(nome)
 			alunoNome[i] = nome
@@ -58,7 +58,7 @@ programa
 
 		limpa()
 
-		enquanto (i < 2) {
+		enquanto (i < 40) {
 			escreva("\n\nAluno(a): ", alunoNome[i], " ", alunoSobrenome[i])
 			escreva("\nMedia do aluno: ", mat.arredondar(alunoMedia[i], 2))
 
@@ -75,3 +75,14 @@ programa
 		escreva("\n\nMedia geral da turma: ", mediaGeral, "\n\n")
 	}
 }
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 1437; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = ;
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */

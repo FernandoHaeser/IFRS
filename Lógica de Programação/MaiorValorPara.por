@@ -1,22 +1,21 @@
-programa
-{
+programa {
 	
-	funcao inicio()
-	{
-		inteiro valor, somaValores = 0, i = 0
-		
-		enquanto ( i < 20 ) {
-			escreva("Informe o ", (i+1), " valor: ")
-			leia(valor)
+	funcao inicio() {
 
-			somaValores += valor
-			
-			i++
+		inteiro value, maiorValor = 0
+		
+		para (inteiro i = 0; i < 50; i++) {
+
+			escreva("Informe um valor: ")
+			leia(value)
+
+			se (i == 0)
+				maiorValor = value
+			senao se (value > maiorValor)
+				maiorValor = value
 		}
 
-		limpa()
-
-		escreva("A soma dos valores e: ", somaValores)
+		escreva("Maior valor: ", maiorValor)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -24,7 +23,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 272; 
+ * @POSICAO-CURSOR = 305; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
