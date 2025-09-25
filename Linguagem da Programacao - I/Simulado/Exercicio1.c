@@ -48,7 +48,7 @@ int main() {
 		
 		if (number > 0 && number % 2 == 0) {
 			printf("Tabuada dos Pares\n");
-			for (int i = 1; i <= number; i++) {
+			for (int i = 1; i <= 10; i++) {
 				printf("\n %d x %d = %d \n", number , i, (number*i));
 			}
 		} 
