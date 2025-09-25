@@ -11,9 +11,11 @@ Calcular em quantos meses a meta será atingida
 
 int main() {
 
+    //Inicilizacao de variaveis
     int meses = 0;
     float rendimento_mensal, deposito_mensal, valor_meta, rendimento = 0;
 
+    // Parte de adquirir entradas
     printf("Informe o valor em percentual do rendimento da aplicacao(%%): ");
     scanf("%f", &rendimento_mensal);
 
@@ -27,11 +29,12 @@ int main() {
 
     while (rendimento < valor_meta) {
         rendimento = rendimento * (1 + rendimento_mensal) + deposito_mensal;
-        meses++;
+        meses++; // calculo/formula para calcular o rendimento
     }
 
+    //Saidas
     printf("\nA quantidade de meses que voce vai alcancar sua meta e de: %d meses", meses);
-    printf("\n\n\nDesenvolvedor: Fernando A. Haeser - WoW");
+    printf("\n\n\nDesenvolvedor: Fernando A. Haeser - WoW"); // eu hoho <3
     return 0;
     
 }
