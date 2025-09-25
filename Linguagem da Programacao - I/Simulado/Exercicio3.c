@@ -107,19 +107,19 @@ int main() {
     int total_votos_prefeito = votos_candidato_prefeitoX + votos_candidato_prefeitoY + votos_candidato_prefeitoZ;
 
     printf("VOTOS PARA VEREADOR\n\n");
-    printf("Vereador A: %d | %.2d \n", votos_candidato_vereadorA, (votos_candidato_vereadorA*100/total_votos_vereador));
-    printf("Vereador B: %d | %.2d \n", votos_candidato_vereadorB, (votos_candidato_vereadorA*100/total_votos_vereador));
-    printf("Vereador C: %d | %.2d \n", votos_candidato_vereadorC, (votos_candidato_vereadorA*100/total_votos_vereador));
-    printf("Vereador D: %d | %.2d \n", votos_candidato_vereadorD, (votos_candidato_vereadorA*100/total_votos_vereador));
-    printf("Votos nulos para vereador: %d | %.2d \n", total_nulos_vereador, (votos_candidato_vereadorA*100/total_votos_vereador));
-    printf("Votos em branco para vereador: %d | %.2d \n\n\n", total_brancos_vereador, (votos_candidato_vereadorA*100/total_votos_vereador));
+    printf("Vereador A: %d | %.2lf \n", votos_candidato_vereadorA, (votos_candidato_vereadorA*100/total_votos_vereador));
+    printf("Vereador B: %d | %.2lf \n", votos_candidato_vereadorB, (votos_candidato_vereadorA*100/total_votos_vereador));
+    printf("Vereador C: %d | %.2lf \n", votos_candidato_vereadorC, (votos_candidato_vereadorA*100/total_votos_vereador));
+    printf("Vereador D: %d | %.2lf \n", votos_candidato_vereadorD, (votos_candidato_vereadorA*100/total_votos_vereador));
+    printf("Votos nulos para vereador: %d | %.2lf \n", total_nulos_vereador, (votos_candidato_vereadorA*100/total_votos_vereador));
+    printf("Votos em branco para vereador: %d | %.lf \n\n\n", total_brancos_vereador, (votos_candidato_vereadorA*100/total_votos_vereador));
 
     printf("VOTOS PARA PREFEITO\n\n");
-    printf("Vereador X: %d | %.2d \n", votos_candidato_prefeitoX, (votos_candidato_prefeitoX*100/total_votos_prefeito));
-    printf("Vereador Y: %d | %.2d \n", votos_candidato_prefeitoY, (votos_candidato_prefeitoY*100/total_votos_prefeito));
-    printf("Vereador Z: %d | %.2d \n", votos_candidato_prefeitoZ, (votos_candidato_prefeitoZ*100/total_votos_prefeito));
-    printf("Votos nulos para prefeito: %d | %.2d \n", total_nulos_prefeito);
-    printf("Votos em branco para prefeito: %d | %.2d \n", total_nulos_prefeito);
+    printf("Vereador X: %d | %.2lf \n", votos_candidato_prefeitoX, (votos_candidato_prefeitoX*100/total_votos_prefeito));
+    printf("Vereador Y: %d | %.2lf \n", votos_candidato_prefeitoY, (votos_candidato_prefeitoY*100/total_votos_prefeito));
+    printf("Vereador Z: %d | %.2lf \n", votos_candidato_prefeitoZ, (votos_candidato_prefeitoZ*100/total_votos_prefeito));
+    printf("Votos nulos para prefeito: %d | %.2lf \n", total_nulos_prefeito);
+    printf("Votos em branco para prefeito: %d | %.2lf \n", total_nulos_prefeito);
 
     return 0;
 }
