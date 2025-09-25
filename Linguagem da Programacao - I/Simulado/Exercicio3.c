@@ -101,6 +101,7 @@ int main() {
             default:
                 total_nulos_prefeito++; 
         }
+        printf("\n\n\n\n\n\n\n\n");
     }
     
     int total_votos_vereador = votos_candidato_vereadorA + votos_candidato_vereadorB + votos_candidato_vereadorC + votos_candidato_vereadorD;
