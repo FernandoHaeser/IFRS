@@ -29,41 +29,43 @@ float celsiusToKelvin(float celsius) {
     return celsius + 273.15;
 }
 
+
+
 int main() {
     
     int choice;
+    float temperature;
     
-    printf("Escolha uma opção\n");
-    printf("1 - Celsius para Fahrenheit\n");
-    printf("2 - Fahrenheit para Celsius\n");
-    printf("3 - Celsius para Kelvin\n");
-    printf("0 - Sair\n\n");
-    printf("R: ");
-    scanf("%d", &choice);
+    do {
+    
+        printf("\n\nInforme a temperatura: ");
+        scanf("%f", &temperature);
+        
+        printf("\n\nEscolha uma opção\n");
+        printf("1 - Celsius para Fahrenheit\n");
+        printf("2 - Fahrenheit para Celsius\n");
+        printf("3 - Celsius para Kelvin\n");
+        printf("0 - Sair\n\n");
+        printf("R: ");
+        scanf("%d", &choice);
 
+    } while (choice != 0 && choice != 1 && choice != 2 && choice != 3);
+    
     switch (choice) {
-        case 1: 
-            float celsius;
-            printf("\n\nInforme a temperatura em Celcius: ");
-            scanf("%f", &celsius);
-            printf("\nSua temperatura em Fahrenheit é de: %.2f", celsiusToFahrenheit(celsius));
+        case 1:
+            printf("\nSua temperatura em Fahrenheit é de: %.2f", celsiusToFahrenheit(temperature));
             break;
         case 2:
-            float fahrenheit;
-            printf("\n\nInforme a temperatura em Fahrenheit: ");
-            scanf("%f", &celsius);
-            printf("\nSua temperatura em Fahrenheit é de: %.2f", fahrenheitToCelsius(fahrenheit));
+            printf("\nSua temperatura em Fahrenheit é de: %.2f", fahrenheitToCelsius(temperature));
             break;
         case 3:
-            printf("\n\nInforme a temperatura em Celcius: ");
-            scanf("%f", &celsius);
-            printf("\nSua temperatura em Kelvin é de: %.2f", celsiusToKelvin(celsius));
+            printf("\nSua temperatura em Kelvin é de: %.2f", celsiusToKelvin(temperature));
             break;
         case 0:
             printf("\n\nSaindo...........");
             return 0;
         default:
-            printf("\n\nOpção inválida! Rode novamente o algoritmo!");
+            printf("\n\nOpção inválida!");
     }
     return 0;
 }
