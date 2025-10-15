@@ -29,8 +29,6 @@ float celsiusToKelvin(float celsius) {
     return celsius + 273.15;
 }
 
-
-
 int main() {
     
     int choice;
