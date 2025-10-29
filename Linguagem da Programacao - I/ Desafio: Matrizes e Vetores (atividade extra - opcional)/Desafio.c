@@ -1,3 +1,5 @@
+// Fernando Augusto Haeser - Oct, 29 | 9h46m
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
