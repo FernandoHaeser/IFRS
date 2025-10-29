@@ -12,8 +12,8 @@ Utilize um vetor para armazenar o valor de cada tipo de nota. Notas = {100, 50, 
 
 int main() {
 
-    const int notas[10] = {100, 50, 20, 10, 5, 2, 1};
-    int valor_reais, notas_100, notas_50, notas_20, notas_10, notas_5, notas_2, notas_1;
+    const int notas[7] = {100, 50, 20, 10, 5, 2, 1};
+    int valor_reais;
     _Bool Continuar = 0;
 
     printf("Qual valor voce deseja sacar? ");
