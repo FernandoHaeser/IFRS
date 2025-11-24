@@ -1,5 +1,5 @@
 /*
-Questão 2: Cálculo de Investimento: 
+Questão 2: Cálculo de Investimento:
 O usuário deve informar:
 i) o percentual de rendimento mensal de uma aplicação;
 ii) o valor mensal de depósito;
@@ -36,5 +36,5 @@ int main() {
     printf("\nA quantidade de meses que voce vai alcancar sua meta e de: %d meses", meses);
     printf("\n\n\nDesenvolvedor: Fernando A. Haeser - WoW"); // eu hoho <3
     return 0;
-    
+
 }
