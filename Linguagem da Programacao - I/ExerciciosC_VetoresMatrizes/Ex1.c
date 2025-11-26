@@ -28,6 +28,6 @@ int main() {
     for (int i = 9; i >= 0; i--) {
         printf(" %d ", num[i]);
     }
-    
+
     return 0;
 }

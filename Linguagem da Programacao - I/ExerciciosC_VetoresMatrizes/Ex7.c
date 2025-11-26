@@ -6,28 +6,35 @@
  c - a média dos números
  d - a soma da primeira linha
  e - o produto (multiplicação) da diagonal principal
+ f - a soma e o produto da diagonal secundária
 */
 
 #include <stdio.h>
-#include <stdlib.h> // para uso do srand
-#include <time.h> // para uso do time(NULL)
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
 
-    srand(time(NULL));   // Inicializacao do rand()
+    srand(time(NULL));
     int matriz[3][3];
-    int maior_valor, menor_valor, soma_numeros = 0, produto_diagonal = 1, soma_linha1 = 0;
+    int maior_valor, menor_valor;
+    int soma_numeros = 0, soma_linha1 = 0;
+    int produto_diagonal = 1;
+    int soma_diag_sec = 0, produto_diag_sec = 1;
     float media_numeros;
 
+    // Preenche a matriz com números aleatórios
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            matriz[i][j] = rand() % 100; // Define numeros aleatorios para a matriz de 0 a 99
+            matriz[i][j] = rand() % 100;
         }
     }
 
+    // Processamento
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            if (i == 0 && j == 0) { // Inicializa variavies com valor atual
+
+            if (i == 0 && j == 0) {
                 maior_valor = matriz[i][j];
                 menor_valor = matriz[i][j];
             }
@@ -40,18 +47,22 @@ int main() {
 
             soma_numeros += matriz[i][j];
 
-            if (i == 0) { //Primeira linha inteira possui i = 0
+            if (i == 0)
                 soma_linha1 += matriz[i][j];
-            }
 
-            if (i == j) // Na diagonal, os indices i e j tem o mesmo valor
+            if (i == j)
                 produto_diagonal *= matriz[i][j];
+
+            if (i + j == 2) { // diagonal secundaria
+                soma_diag_sec += matriz[i][j];
+                produto_diag_sec *= matriz[i][j];
+            }
         }
     }
 
-    media_numeros = soma_numeros / 9.0; // 9.0 para evitar truncamento
+    media_numeros = soma_numeros / 9.0;
 
-    // Saida gerada pelo GPT
+    // Impressão da matriz
     printf("\nMatriz gerada:\n");
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
@@ -60,13 +71,15 @@ int main() {
         printf("\n");
     }
 
+    // Resultados
     printf("\nMaior valor: %d", maior_valor);
     printf("\nMenor valor: %d", menor_valor);
     printf("\nSoma de todos os números: %d", soma_numeros);
     printf("\nMédia dos números: %.2f", media_numeros);
     printf("\nProduto da diagonal principal: %d", produto_diagonal);
+    printf("\nSoma da diagonal secundária: %d", soma_diag_sec);
+    printf("\nProduto da diagonal secundária: %d", produto_diag_sec);
     printf("\nSoma da primeira linha: %d\n", soma_linha1);
 
+    return 0;
 }
-
-// Fernando Augusto Haeser - Oct, 29 / 2025 | 09h17m
