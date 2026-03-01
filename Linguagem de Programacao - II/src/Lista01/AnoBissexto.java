@@ -1,7 +1,11 @@
 /*
 
-Crie um programa que solicite a base e a altura de um retângulo, calcule e exiba a sua área total.
-Exemplo: Se base = 5.0 e altura = 10.0, a saída deve ser "Área: 50.0".
+4. Verificador de Ano Bissexto
+
+Solicite um ano e informe se ele é bissexto. Regra: O ano deve ser divisível por 4 e não por 100,
+ou ser divisível por 400.
+
+Exemplo: O ano 2024 é bissexto. O ano 2023 não é.
 
 */
 
@@ -9,23 +13,20 @@ package Lista01;
 
 import java.util.Scanner;
 
-public class AreaRetangulo {
+public class AnoBissexto {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // entradas
-        System.out.print("Informe a base do retângulo: ");
-        double base = sc.nextDouble();
+        System.out.print("Informe um ano, por favor: ");
+        int year = sc.nextInt();
 
-        System.out.print("Informe a altura do retângulo: ");
-        double altura = sc.nextDouble();
-
-        double area = base * altura;
-
-        // saida
-        System.out.printf("\nSua área é de: %.2f", area);
+        // resto de ano / 400 seja 0, ou se o resto de ano / 4 seja 0 e de ano / 100 seja diferente de 0.
+        if((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
+            System.out.println("\n" + year + " é um ano Bissexto!");
+        else
+            System.out.println("\n" + year + " não é um ano Bissexto!");
 
         sc.close();
     }
@@ -35,7 +36,7 @@ public class AreaRetangulo {
 
 Made by: Fernando Augusto Haeser
 
-24/02/2026 | 22h16m
+28/02/2026 | 22h21m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿

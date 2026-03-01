@@ -1,7 +1,11 @@
 /*
 
-Crie um programa que solicite a base e a altura de um retângulo, calcule e exiba a sua área total.
-Exemplo: Se base = 5.0 e altura = 10.0, a saída deve ser "Área: 50.0".
+2. Conversor de Moedas
+
+Peça ao usuário um valor em Reais (R$) e a cotação atual do Dólar (US$).
+Exiba o valor convertido para dólares com o símbolo US$.
+
+Exemplo: R$ 100,00 com cotação de 5.00 resulta em "Valor convertido: US$ 20.00".
 
 */
 
@@ -9,23 +13,23 @@ package Lista01;
 
 import java.util.Scanner;
 
-public class AreaRetangulo {
+public class ConversorMoeda {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // entradas
-        System.out.print("Informe a base do retângulo: ");
-        double base = sc.nextDouble();
+        final double dolarValue = 5.13; // cotacao atual 28/02/2026 - 22h16m
 
-        System.out.print("Informe a altura do retângulo: ");
-        double altura = sc.nextDouble();
+        System.out.print("Informe o valor em reais para converter para dólar: R$");
+        double realValue = sc.nextDouble();
 
-        double area = base * altura;
+        double finalValue = realValue / dolarValue;
 
-        // saida
-        System.out.printf("\nSua área é de: %.2f", area);
+        // Dolar para real -> Multiplica
+        // Real para dolar -> Divide
+
+        System.out.printf("\nO valor final é de: US$%.2f", finalValue); // saida formatada.
 
         sc.close();
     }
@@ -35,7 +39,7 @@ public class AreaRetangulo {
 
 Made by: Fernando Augusto Haeser
 
-24/02/2026 | 22h16m
+28/02/2026 | 22h16m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿

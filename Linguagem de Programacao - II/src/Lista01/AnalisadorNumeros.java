@@ -1,31 +1,43 @@
 /*
 
-Crie um programa que solicite a base e a altura de um retângulo, calcule e exiba a sua área total.
-Exemplo: Se base = 5.0 e altura = 10.0, a saída deve ser "Área: 50.0".
+8. Analisador de Números
+
+Peça números inteiros até que o usuário digite 0. Ao final, exiba a quantidade de números informados
+(exceto o 0) e a soma total entre eles.
+
+Exemplo de execução: usuário digitou 10, 5, 2, 0 -> Saída: "Foram digitados 3 números. Soma: 17".
 
 */
+
 
 package Lista01;
 
 import java.util.Scanner;
 
-public class AreaRetangulo {
+public class AnalisadorNumeros {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // entradas
-        System.out.print("Informe a base do retângulo: ");
-        double base = sc.nextDouble();
+        int n = 1; // só serve pra entrar no loop com a condition false;
+        int countNumbers = 0;
+        int sumNumbers = 0;
 
-        System.out.print("Informe a altura do retângulo: ");
-        double altura = sc.nextDouble();
+        while (n != 0) {
+            System.out.print("\nInforme um número: ");
+            n = sc.nextInt();
 
-        double area = base * altura;
+            if (n == 0)
+                continue;
+            else
+                countNumbers++;
 
-        // saida
-        System.out.printf("\nSua área é de: %.2f", area);
+            sumNumbers += n;
+        }
+
+        System.out.println("\n\nForam digitados " + countNumbers + " números. " +
+                "Soma: " + sumNumbers);
 
         sc.close();
     }
@@ -35,7 +47,7 @@ public class AreaRetangulo {
 
 Made by: Fernando Augusto Haeser
 
-24/02/2026 | 22h16m
+28/02/2026 | 23h:59m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿

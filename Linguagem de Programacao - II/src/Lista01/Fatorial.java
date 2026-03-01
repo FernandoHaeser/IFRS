@@ -1,7 +1,9 @@
 /*
 
-Crie um programa que solicite a base e a altura de um retângulo, calcule e exiba a sua área total.
-Exemplo: Se base = 5.0 e altura = 10.0, a saída deve ser "Área: 50.0".
+7. Cálculo de Fatorial
+
+Peça um número e calcule o seu fatorial utilizando um laço for.
+Exemplo: 5! resulta em "Fatorial de 5 é 120". (5 * 4 * 3 * 2 * 1).
 
 */
 
@@ -9,23 +11,25 @@ package Lista01;
 
 import java.util.Scanner;
 
-public class AreaRetangulo {
+public class Fatorial {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // entradas
-        System.out.print("Informe a base do retângulo: ");
-        double base = sc.nextDouble();
+        double factorial = 1; // inicializa em 1 por ser multiplicação.
 
-        System.out.print("Informe a altura do retângulo: ");
-        double altura = sc.nextDouble();
+        System.out.print("Informe o número N para descobrir seu fatorial: ");
+        int n = sc.nextInt();
 
-        double area = base * altura;
+        System.out.println("Fatorial de " + n + "!:");
 
-        // saida
-        System.out.printf("\nSua área é de: %.2f", area);
+        for(int i = 1; i <= n; i++) {
+            // factorial = factorial * i;
+            factorial *= i;
+        }
+
+        System.out.println("\nResultado de " + n + ": " + factorial);
 
         sc.close();
     }
@@ -35,7 +39,7 @@ public class AreaRetangulo {
 
 Made by: Fernando Augusto Haeser
 
-24/02/2026 | 22h16m
+28/02/2026 | 23h52m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿

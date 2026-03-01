@@ -1,7 +1,11 @@
 /*
 
-Crie um programa que solicite a base e a altura de um retângulo, calcule e exiba a sua área total.
-Exemplo: Se base = 5.0 e altura = 10.0, a saída deve ser "Área: 50.0".
+3. Média de Consumo
+
+Desenvolva um programa que peça a distância total percorrida (em km) e o combustível gasto (em litros).
+Exiba o consumo médio do veículo em km/l.
+
+Exemplo: 500km percorridos com 50 litros resulta em "Consumo médio: 10.0 km/l".
 
 */
 
@@ -9,23 +13,23 @@ package Lista01;
 
 import java.util.Scanner;
 
-public class AreaRetangulo {
+public class ConsumoMedio {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // entradas
-        System.out.print("Informe a base do retângulo: ");
-        double base = sc.nextDouble();
+        System.out.print("Distância total percorrida (em km): ");
+        double distance = sc.nextDouble();
 
-        System.out.print("Informe a altura do retângulo: ");
-        double altura = sc.nextDouble();
+        System.out.print("Combustível gasto (em litros): ");
+        double fuel = sc.nextDouble();
 
-        double area = base * altura;
+        double avgConsumption = distance / fuel;
+        // variaveis com nomes mais autoexplicativos tornam o codigo mais legivel.
+        // avg = average
 
-        // saida
-        System.out.printf("\nSua área é de: %.2f", area);
+        System.out.printf("%nO consumo médio é de: %.2fkm/l", avgConsumption);
 
         sc.close();
     }
@@ -35,7 +39,7 @@ public class AreaRetangulo {
 
 Made by: Fernando Augusto Haeser
 
-24/02/2026 | 22h16m
+28/02/2026 | 23h13m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿

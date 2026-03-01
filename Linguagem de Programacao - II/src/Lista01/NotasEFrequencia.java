@@ -1,31 +1,34 @@
 /*
 
-Crie um programa que solicite a base e a altura de um retângulo, calcule e exiba a sua área total.
-Exemplo: Se base = 5.0 e altura = 10.0, a saída deve ser "Área: 50.0".
+5. Sistema de Notas e Frequência
 
-*/
+Peça a média final de um aluno e a sua porcentagem de presença. O aluno é aprovado apenas se tiver média maior ou igual
+a 7.0 e presença maior ou igual a 75%.
+
+Exemplo: Média 8.0 e 80% frequência resulta em "Aprovado". Média 6.0 e 90% frequência resulta em "Reprovado".
+
+ */
 
 package Lista01;
 
 import java.util.Scanner;
 
-public class AreaRetangulo {
+public class NotasEFrequencia {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // entradas
-        System.out.print("Informe a base do retângulo: ");
-        double base = sc.nextDouble();
+        System.out.print("Qual a média final do aluno? ");
+        double finalAvg = sc.nextDouble();
 
-        System.out.print("Informe a altura do retângulo: ");
-        double altura = sc.nextDouble();
+        System.out.print("Qual porcentagem de frequência do mesmo? ");
+        double attendancePercentage = sc.nextDouble();
 
-        double area = base * altura;
-
-        // saida
-        System.out.printf("\nSua área é de: %.2f", area);
+        if (finalAvg >= 7 && attendancePercentage >= 75)
+            System.out.println("\nAluno aprovado!");
+        else
+            System.out.println("\nAluno reprovado!");
 
         sc.close();
     }
@@ -35,7 +38,7 @@ public class AreaRetangulo {
 
 Made by: Fernando Augusto Haeser
 
-24/02/2026 | 22h16m
+28/02/2026 | 23h29m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
