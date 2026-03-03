@@ -1,39 +1,35 @@
 /*
 
-10. Gestão de Estoque Simplificada
+5. Sistema de Notas e Frequência
 
-Simule o controle de uma loja com estoque inicial de 10 unidades. Use um laço para atender 3 clientes,
-verificando se há saldo suficiente para cada venda e mostrando o estoque final.
+Peça a média final de um aluno e a sua porcentagem de presença. O aluno é aprovado apenas se tiver média maior ou igual
+a 7.0 e presença maior ou igual a 75%.
 
-Exemplo: Venda de 4 unidades, Venda de 7 (Estoque Insuficiente), Venda de 2 -> "Estoque final: 4 unidades".
+Exemplo: Média 8.0 e 80% frequência resulta em "Aprovado". Média 6.0 e 90% frequência resulta em "Reprovado".
 
-*/
+ */
 
-package Lista01;
+package lista01;
 
 import java.util.Scanner;
 
-public class GestaoEstoque {
+public class NotasEFrequencia {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        int stock = 10;
+        System.out.print("Qual a média final do aluno? ");
+        double finalAvg = sc.nextDouble();
 
-        for (int clients = 0; clients < 3; clients++) {
+        System.out.print("Qual porcentagem de frequência do mesmo? ");
+        double attendancePercentage = sc.nextDouble();
 
-            System.out.print("\nQuantos itens do estoque você deseja levar? ");
-            int clientAnswer = sc.nextInt();
+        if (finalAvg >= 7 && attendancePercentage >= 75)
+            System.out.println("\nAluno aprovado!");
+        else
+            System.out.println("\nAluno reprovado!");
 
-            if (stock > clientAnswer) {
-                stock -= clientAnswer;
-                System.out.println("Venda OK!");
-            } else {
-                System.out.println("Estoque insuficiente pra venda!");
-            }
-        }
-        System.out.println("\nEstoque final: " + stock + " unidades.");
         sc.close();
     }
 }
@@ -42,7 +38,7 @@ public class GestaoEstoque {
 
 Made by: Fernando Augusto Haeser
 
-01/03/2026 | 00h21m
+28/02/2026 | 23h29m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
@@ -60,4 +56,4 @@ Made by: Fernando Augusto Haeser
 ⠄⠄⠙⣿⣿⠿⣿⣿⣿⣿⣷⡤⠈⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠠⠔⠄⠄⠄⠄⠄
 ⠄⠄⠄⡈⢿⣷⣿⣿⢿⣿⣿⣷⡦⢤⡀⠄⠄⠄⠄⠄⠄⢐⣠⡿⠁⠄⠄⠄⠄⠄
 
-*/
+ */

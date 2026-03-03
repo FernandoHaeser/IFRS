@@ -1,36 +1,51 @@
 /*
 
-3. Média de Consumo
+6. Sequência de Fibonacci
 
-Desenvolva um programa que peça a distância total percorrida (em km) e o combustível gasto (em litros).
-Exiba o consumo médio do veículo em km/l.
-
-Exemplo: 500km percorridos com 50 litros resulta em "Consumo médio: 10.0 km/l".
+Solicite um número inteiro N e exiba os primeiros N termos da sequência de Fibonacci. Utilize um laço while.
+O que é? A sequência começa com 0 e 1, e cada próximo número é a soma dos dois anteriores.
+Exemplo: Se N = 5, a saída deve ser "0, 1, 1, 2, 3".
 
 */
 
-package Lista01;
+package lista01;
 
 import java.util.Scanner;
 
-public class ConsumoMedio {
+public class Fibonacci {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Distância total percorrida (em km): ");
-        double distance = sc.nextDouble();
+        int i = 0;
+        long firstTerm = 0;
+        long secondTerm = 1;
 
-        System.out.print("Combustível gasto (em litros): ");
-        double fuel = sc.nextDouble();
+        System.out.print("Informe os N termos que deseja saber da sequência de Fibonacci: ");
+        int n = sc.nextInt();
 
-        double avgConsumption = distance / fuel;
-        // variaveis com nomes mais autoexplicativos tornam o codigo mais legivel.
-        // avg = average
+        System.out.println("Sequência de Fibonacci de " + n + " termos:");
 
-        System.out.printf("%nO consumo médio é de: %.2fkm/l", avgConsumption);
+        while (i < n) {
 
+            if (i < n - 1)
+                System.out.print(firstTerm + ", ");
+            else
+                System.out.print(firstTerm);
+
+            // também poderia ser usado um op ternário para o caso acima: (firstTerm + (i < n - 1 ? ", " : ""));
+
+            // calculo do próximo termo.
+            long nextTerm = firstTerm + secondTerm;
+
+            // atualiza as variáveis pra próxima interação.
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+
+            // incremento de i = i + 1
+            i++;
+        }
         sc.close();
     }
 }
@@ -39,7 +54,12 @@ public class ConsumoMedio {
 
 Made by: Fernando Augusto Haeser
 
-28/02/2026 | 23h13m
+References:
+
+- https://www.programiz.com/java-programming/examples/fibonacci-series
+- https://pt.stackoverflow.com/questions/211562/solução-simples-para-algoritmo-de-fibonacci
+
+28/02/2026 | 23h43m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿

@@ -1,34 +1,35 @@
 /*
 
-5. Sistema de Notas e Frequência
+7. Cálculo de Fatorial
 
-Peça a média final de um aluno e a sua porcentagem de presença. O aluno é aprovado apenas se tiver média maior ou igual
-a 7.0 e presença maior ou igual a 75%.
+Peça um número e calcule o seu fatorial utilizando um laço for.
+Exemplo: 5! resulta em "Fatorial de 5 é 120". (5 * 4 * 3 * 2 * 1).
 
-Exemplo: Média 8.0 e 80% frequência resulta em "Aprovado". Média 6.0 e 90% frequência resulta em "Reprovado".
+*/
 
- */
-
-package Lista01;
+package lista01;
 
 import java.util.Scanner;
 
-public class NotasEFrequencia {
+public class Fatorial {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Qual a média final do aluno? ");
-        double finalAvg = sc.nextDouble();
+        double factorial = 1; // inicializa em 1 por ser multiplicação.
 
-        System.out.print("Qual porcentagem de frequência do mesmo? ");
-        double attendancePercentage = sc.nextDouble();
+        System.out.print("Informe o número N para descobrir seu fatorial: ");
+        int n = sc.nextInt();
 
-        if (finalAvg >= 7 && attendancePercentage >= 75)
-            System.out.println("\nAluno aprovado!");
-        else
-            System.out.println("\nAluno reprovado!");
+        System.out.println("Fatorial de " + n + "!:");
+
+        for(int i = 1; i <= n; i++) {
+            // factorial = factorial * i;
+            factorial *= i;
+        }
+
+        System.out.println("\nResultado de " + n + ": " + factorial);
 
         sc.close();
     }
@@ -38,7 +39,7 @@ public class NotasEFrequencia {
 
 Made by: Fernando Augusto Haeser
 
-28/02/2026 | 23h29m
+28/02/2026 | 23h52m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿

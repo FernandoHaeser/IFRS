@@ -1,32 +1,39 @@
 /*
 
-Crie um programa que solicite a base e a altura de um retângulo, calcule e exiba a sua área total.
-Exemplo: Se base = 5.0 e altura = 10.0, a saída deve ser "Área: 50.0".
+10. Gestão de Estoque Simplificada
+
+Simule o controle de uma loja com estoque inicial de 10 unidades. Use um laço para atender 3 clientes,
+verificando se há saldo suficiente para cada venda e mostrando o estoque final.
+
+Exemplo: Venda de 4 unidades, Venda de 7 (Estoque Insuficiente), Venda de 2 -> "Estoque final: 4 unidades".
 
 */
 
-package Lista01;
+package lista01;
 
 import java.util.Scanner;
 
-public class AreaRetangulo {
+public class GestaoEstoque {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // entradas
-        System.out.print("Informe a base do retângulo: ");
-        double base = sc.nextDouble();
+        int stock = 10;
 
-        System.out.print("Informe a altura do retângulo: ");
-        double altura = sc.nextDouble();
+        for (int clients = 0; clients < 3; clients++) {
 
-        double area = base * altura;
+            System.out.print("\nQuantos itens do estoque você deseja levar? ");
+            int clientAnswer = sc.nextInt();
 
-        // saida
-        System.out.printf("\nSua área é de: %.2f", area);
-
+            if (stock > clientAnswer) {
+                stock -= clientAnswer;
+                System.out.println("Venda OK!");
+            } else {
+                System.out.println("Estoque insuficiente pra venda!");
+            }
+        }
+        System.out.println("\nEstoque final: " + stock + " unidades.");
         sc.close();
     }
 }
@@ -35,7 +42,7 @@ public class AreaRetangulo {
 
 Made by: Fernando Augusto Haeser
 
-24/02/2026 | 22h16m
+01/03/2026 | 00h21m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
@@ -53,4 +60,4 @@ Made by: Fernando Augusto Haeser
 ⠄⠄⠙⣿⣿⠿⣿⣿⣿⣿⣷⡤⠈⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠠⠔⠄⠄⠄⠄⠄
 ⠄⠄⠄⡈⢿⣷⣿⣿⢿⣿⣿⣷⡦⢤⡀⠄⠄⠄⠄⠄⠄⢐⣠⡿⠁⠄⠄⠄⠄⠄
 
- */
+*/

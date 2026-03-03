@@ -1,43 +1,35 @@
 /*
 
-8. Analisador de Números
+2. Conversor de Moedas
 
-Peça números inteiros até que o usuário digite 0. Ao final, exiba a quantidade de números informados
-(exceto o 0) e a soma total entre eles.
+Peça ao usuário um valor em Reais (R$) e a cotação atual do Dólar (US$).
+Exiba o valor convertido para dólares com o símbolo US$.
 
-Exemplo de execução: usuário digitou 10, 5, 2, 0 -> Saída: "Foram digitados 3 números. Soma: 17".
+Exemplo: R$ 100,00 com cotação de 5.00 resulta em "Valor convertido: US$ 20.00".
 
 */
 
-
-package Lista01;
+package lista01;
 
 import java.util.Scanner;
 
-public class AnalisadorNumeros {
+public class ConversorMoeda {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        int n = 1; // só serve pra entrar no loop com a condition false;
-        int countNumbers = 0;
-        int sumNumbers = 0;
+        final double dolarValue = 5.13; // cotacao atual 28/02/2026 - 22h16m
 
-        while (n != 0) {
-            System.out.print("\nInforme um número: ");
-            n = sc.nextInt();
+        System.out.print("Informe o valor em reais para converter para dólar: R$");
+        double realValue = sc.nextDouble();
 
-            if (n == 0)
-                continue;
-            else
-                countNumbers++;
+        double finalValue = realValue / dolarValue;
 
-            sumNumbers += n;
-        }
+        // Dolar para real -> Multiplica
+        // Real para dolar -> Divide
 
-        System.out.println("\n\nForam digitados " + countNumbers + " números. " +
-                "Soma: " + sumNumbers);
+        System.out.printf("\nO valor final é de: US$%.2f", finalValue); // saida formatada.
 
         sc.close();
     }
@@ -47,7 +39,7 @@ public class AnalisadorNumeros {
 
 Made by: Fernando Augusto Haeser
 
-28/02/2026 | 23h:59m
+28/02/2026 | 22h16m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿

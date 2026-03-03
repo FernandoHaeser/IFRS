@@ -9,7 +9,7 @@ Exemplo: Se o usuário digitar 1 metro e escolher centímetros, a saída é "100
 
 */
 
-package Lista01;
+package lista01;
 
 import java.util.Scanner;
 

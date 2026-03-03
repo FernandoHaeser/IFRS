@@ -1,51 +1,33 @@
 /*
 
-6. Sequência de Fibonacci
+4. Verificador de Ano Bissexto
 
-Solicite um número inteiro N e exiba os primeiros N termos da sequência de Fibonacci. Utilize um laço while.
-O que é? A sequência começa com 0 e 1, e cada próximo número é a soma dos dois anteriores.
-Exemplo: Se N = 5, a saída deve ser "0, 1, 1, 2, 3".
+Solicite um ano e informe se ele é bissexto. Regra: O ano deve ser divisível por 4 e não por 100,
+ou ser divisível por 400.
+
+Exemplo: O ano 2024 é bissexto. O ano 2023 não é.
 
 */
 
-package Lista01;
+package lista01;
 
 import java.util.Scanner;
 
-public class Fibonacci {
+public class AnoBissexto {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        int i = 0;
-        long firstTerm = 0;
-        long secondTerm = 1;
+        System.out.print("Informe um ano, por favor: ");
+        int year = sc.nextInt();
 
-        System.out.print("Informe os N termos que deseja saber da sequência de Fibonacci: ");
-        int n = sc.nextInt();
+        // resto de ano / 400 seja 0, ou se o resto de ano / 4 seja 0 e de ano / 100 seja diferente de 0.
+        if((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
+            System.out.println("\n" + year + " é um ano Bissexto!");
+        else
+            System.out.println("\n" + year + " não é um ano Bissexto!");
 
-        System.out.println("Sequência de Fibonacci de " + n + " termos:");
-
-        while (i < n) {
-
-            if (i < n - 1)
-                System.out.print(firstTerm + ", ");
-            else
-                System.out.print(firstTerm);
-
-            // também poderia ser usado um op ternário para o caso acima: (firstTerm + (i < n - 1 ? ", " : ""));
-
-            // calculo do próximo termo.
-            long nextTerm = firstTerm + secondTerm;
-
-            // atualiza as variáveis pra próxima interação.
-            firstTerm = secondTerm;
-            secondTerm = nextTerm;
-
-            // incremento de i = i + 1
-            i++;
-        }
         sc.close();
     }
 }
@@ -54,12 +36,7 @@ public class Fibonacci {
 
 Made by: Fernando Augusto Haeser
 
-References:
-
-- https://www.programiz.com/java-programming/examples/fibonacci-series
-- https://pt.stackoverflow.com/questions/211562/solução-simples-para-algoritmo-de-fibonacci
-
-28/02/2026 | 23h43m
+28/02/2026 | 22h21m
 
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
