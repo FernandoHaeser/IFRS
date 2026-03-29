@@ -12,7 +12,7 @@ public class Profile {
     public Profile(String nome, int idade) {
         this.idPerfil = UUID.randomUUID().toString();
         this.nome = nome;
-        setIdade(idade); // Chama o setter para aplicar a lógica de restrição
+        setIdade(idade);
     }
 
     public String getIdPerfil() {
