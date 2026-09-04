@@ -1,4 +1,4 @@
-package exercicioPratico2;
+package LAB03.exercicioPratico2;
 
 public class Sensor {
 
@@ -16,6 +16,7 @@ public class Sensor {
 	}
 
 	public void setNomeAparelho(String nomeAparelho) {
+		System.out.println("[DEBUG] CHANGING nomeAparelho VALUE");
 		this.nomeAparelho = nomeAparelho;
 	}
 
@@ -25,6 +26,7 @@ public class Sensor {
 
 	public void setVoltagem(int voltagem) {
 		if (voltagem == 110 || voltagem == 220) {
+			System.out.println("[DEBUG] CHANGING voltagem VALUE");
 			this.voltagem = voltagem;
 		} else {
 			System.out.println("[INFO] Voltagem inválida! Definindo valor padrão");
@@ -38,6 +40,7 @@ public class Sensor {
 
 	public double sondarConsumo(double consumo) {
 		if (consumo >= 0 && consumo <= 500) {
+			System.out.println("[DEBUG] CHANGING consumo VALUE");
 			this.consumoAtual = consumo;
 			return this.consumoAtual;
 		} else {
@@ -48,9 +51,10 @@ public class Sensor {
 
 	@Override
 	public String toString() {
-		return "=== Sensor ===\n" +
+		return "\n=== Sensor ===\n" +
 				"Nome do Aparelho: " + nomeAparelho +
 				"\nVoltagem: " + voltagem + "v" +
-				"\nConsumo atual: " + consumoAtual + "w\n";
+				"\nConsumo atual: " + String.format("%.2f", consumoAtual) + "w" +
+				"\n===============\n";
 	}
 }

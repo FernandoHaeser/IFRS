@@ -1,4 +1,4 @@
-package exercicioPratico;
+package LAB03.exercicioPratico;
 
 public class SmartBulb {
 
