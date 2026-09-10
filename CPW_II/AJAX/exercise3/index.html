@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Crie um arquivo produtos.json contendo uma lista (array) de objetos,
+        por exemplo: [{ "nome": "Caneta", "preco": 2.5 }, { "nome": "Caderno", "preco": 12 }].
+        Usando apenas XMLHttpRequest, faça a requisição,
+        converta a resposta com JSON.parse(xhr.responseText),
+        percorra o array recebido com forEach() (ou um for) e crie dinamicamente
+        um <li> para cada produto dentro de uma <ul id="lista-produtos">,
+        exibindo o nome e o preço de cada item.
+        */
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.open('GET', 'produtos.json', true);
+
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                let products = JSON.parse(xhr.responseText);
+                const newList = document.createElement("ul");
+                newList.id = "listOfProducts";
+                document.body.appendChild(newList);
+                for (const product of products) {
+                    let newItem = document.createElement("li");
+                    // Fix: Use textContent to safely add text to the <li> element
+                    newItem.textContent = `${product.nome} - R$${product.preco}`;
+
+                    // Append the <li> to the <ul>
+                    newList.appendChild(newItem);
+
+                    console.log(product);
+                }
+            } else {
+                alert("dacuebao");
+            }
+        };
+
+        xhr.send();
+    </script>
+</body>
+
+</html>

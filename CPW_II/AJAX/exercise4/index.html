@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Repita o exercício 1, mas agora informe de propósito uma URL que não existe
+        (por exemplo, naoexiste.txt). Verifique o xhr.status dentro de onload
+        (valores fora da faixa 200-299 indicam erro) e exiba a mensagem
+        "Erro ao carregar dados" dentro do <p id="resultado"> quando a requisição falhar.
+        Teste também com a URL correta para garantir que o caminho de sucesso continua
+        funcionando.
+        */
+
+        let xhr = new XMLHttpRequest();
+        let xhrCorrect = new XMLHttpRequest();
+
+        xhr.open('GET', 'DJNAJFJFJEGFBJHEG.txt', true);
+        xhrCorrect.open('GET', 'dados.txt', true);
+
+        const newDiv = document.createElement("div");
+        newDiv.id = "LESSGO";
+        document.body.appendChild(newDiv);
+
+        const newDiv2 = document.createElement("div");
+        newDiv2.id = "LESSGO2";
+        document.body.appendChild(newDiv2);
+
+        // dado que n funciona
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                alert("funfou")
+            } else {
+                let response = "Impossível Carregar os dados";
+                document.getElementById("LESSGO").textContent = response;
+            }
+        };
+
+        // dado que funciona
+        xhrCorrect.onload = function () {
+            if (xhrCorrect.status >= 200 && xhrCorrect.status < 300) {
+                let response = xhrCorrect.responseText;
+                document.getElementById("LESSGO2").textContent = "Dado que funciona: " + response;
+            } else {
+                alert("LESS GOGOOGGOGOGOOGGO");
+            }
+        };
+
+        xhr.send();
+        xhrCorrect.send();
+    </script>
+</body>
+</html>
