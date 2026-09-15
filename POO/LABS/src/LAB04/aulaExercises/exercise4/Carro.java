@@ -1,4 +1,4 @@
-package LAB04.exercise4;
+package LAB04.aulaExercises.exercise4;
 
 public class Carro {
 	

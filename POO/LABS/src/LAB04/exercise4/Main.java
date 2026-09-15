@@ -2,11 +2,14 @@ package LAB04.exercise4;
 
 public class Main {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Carro carro = new Carro("seilamotor");
+        Perfil perfil = new Perfil("Fernando");
 
-		System.out.println(carro);
-	}
+        System.out.println(perfil.getNome() + " público? " + perfil.isPerfilPublico());
 
+        perfil.tornarPublico();
+
+        System.out.println(perfil.getNome() + " público? " + perfil.isPerfilPublico());
+    }
 }

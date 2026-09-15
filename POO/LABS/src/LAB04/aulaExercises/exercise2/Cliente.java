@@ -1,4 +1,4 @@
-package LAB04.exercise2;
+package LAB04.aulaExercises.exercise2;
 
 public class Cliente {
 

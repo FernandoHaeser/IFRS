@@ -1,4 +1,4 @@
-package LAB04.exercise3;
+package LAB04.aulaExercises.exercise3;
 
 public class Jogador {
 	
