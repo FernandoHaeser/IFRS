@@ -1,0 +1,8 @@
+Um jogo de arena tem três classes de personagem, e todas compartilham o essencial: têm um nome e uma quantidade de vida, atacam outro personagem, recebem dano e deixam de lutar quando a vida chega a zero, sem que ela fique negativa. O que muda é como cada uma ataca e se defende. O guerreiro começa com 100 de vida, causa sempre 12 de dano e usa uma armadura que absorve 4 pontos de todo dano que recebe. O mago começa com 70 de vida e 30 de mana, e cada ataque gasta 10 de mana para causar 20 de dano, mas sem mana suficiente ele causa só 3. O arqueiro começa com 80 de vida e 3 flechas, e cada flecha causa 15 de dano, mas sem flechas ele passa a causar 5. Nenhum personagem existe no jogo sem ser de uma dessas três classes.
+
+O que sua solução precisa ter
+
+Uma classe que reúne o que é comum a todos os personagens, incluindo um único método de ataque, escrito uma vez só, que recebe o personagem-alvo, obtém o dano de quem ataca, exibe o que aconteceu e aplica o dano no alvo.
+Cada classe de personagem define como calcula o próprio dano. Apenas o guerreiro muda a forma de receber dano, e ele faz isso reaproveitando o comportamento comum, e não reescrevendo a subtração da vida.
+Mana e flechas pertencem só a quem as usa, e não aparecem na classe comum.
+No main, um vetor com um personagem de cada classe, em que, a cada rodada, cada personagem vivo ataca o seguinte do vetor (o último ataca o primeiro). Execute quatro rodadas, exibindo a vida de todos ao fim de cada uma.
