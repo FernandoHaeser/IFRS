@@ -1,4 +1,24 @@
-.exe
-.vscode
-.idea
-out/*
+# OS
+.DS_Store
+
+# Editors / IDEs
+.vscode/
+.idea/
+/POO/.metadata/
+
+# Build outputs
+*.exe
+*.o
+*.out
+*.class
+*.dSYM/
+out/
+/POO/LABS/bin/
+
+# ED_I: extensionless C binaries (was ED_I/exercises/.gitignore)
+/ED_I/exercises/**
+!/ED_I/exercises/**/
+!/ED_I/exercises/**/*.*
+
+# Orchestrator
+.orch/
